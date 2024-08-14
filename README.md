@@ -3,9 +3,11 @@
 <h2>Support crate blocks:</h2>
 <ol>
   <li>Chest</li>
-  <li>Enchanted Blocks</li>
+  <li>EnchantTable</li>
   <li>Shulker(bugs)</li>
   <li>Barrel</li>
+  <li>Ender Chest</li>
+  <li>Beacon</li>
 </ol>
 
 <h2>Screenshot:</h2>
