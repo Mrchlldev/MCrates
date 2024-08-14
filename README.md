@@ -1,5 +1,14 @@
 # MCrates
-<p>MCrates is a cloning plugin from PiggyCrates, Make simple and customizable crates plugin, supporting an unlimited amount of crate types.</p>
+<p>MCrates is a cloning plugin from PiggyCrates, Make simple and customizable crates plugin, supporting an unlimited amount of crate types. support custom item by Customies?</p>
+
+<h2>Depend:</h2>
+<ol>
+  <li>Commando</li>
+  <li>libPiggyUpdateChecker</li>
+  <li>InvMenu</li>
+  <li>Customies</li>
+</ol>
+
 <h2>Support crate blocks:</h2>
 <ol>
   <li>Chest</li>
