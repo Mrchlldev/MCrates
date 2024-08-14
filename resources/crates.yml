@@ -1,0 +1,30 @@
+crates:
+  Epic:
+    drops:
+      - name: "§bSword Legend"
+        item: "diamond_sword"
+        amount: 1
+        chance: 25
+        enchantments:
+        - name: "Sharpness"
+          level: 2
+        - name: "Fire Aspect"
+          level: 2
+      - name: "§bDiamond Axe"
+        item: "diamond_axe"
+        amount: 1
+        chance: 25
+      - item: "cooked_chicken"
+        amount: 64
+        chance: 15
+      - name: "Makanan"
+        item: "bread"
+        amount: 64
+        chance: 15
+      - name: "Makanan"
+        item: "cooked_beef"
+        amount: 64
+        chance: 15
+    amount: 1
+    commands: ["say §l§e{PLAYER}\n§7Has Opened Crate: §eCringe"]
+    floating-text: "Epic Crate"

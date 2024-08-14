@@ -1,0 +1,25 @@
+name: MCrates
+main: Mrchlldev\MCrates\MCrates
+version: 0.0.1
+api: 5.0.0
+author: "DaPigGuy, Remaked and Convert by Mrchlldev"
+
+permissions:
+  mcrate:
+    default: false
+    description: "Allows usage of all MCrates features"
+  mcrate.command:
+    default: op
+    description: "Allow usage of all MCrates commands"
+  mcrate.command.crate:
+    default: op
+    description: "Allow usage of the /crate command"
+  mcrate.command.keyshop:
+    default: true
+    description: "Allow usage of the /keyshop command"
+  mcrate.command.key:
+    default: op
+    description: "Allow usage of the /key command"
+  mcrate.command.keyall:
+    default: op
+    description: "Allow usage of the /keyall command"

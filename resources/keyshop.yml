@@ -1,0 +1,6 @@
+1:
+  Key:
+    Name: "Epic" # Key Name
+    Price: 1000 # Price key
+  Button:
+    Name: "§l§eCommon Key" # Button Name

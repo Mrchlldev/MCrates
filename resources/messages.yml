@@ -1,0 +1,46 @@
+commands:
+  use-in-game: "{RED}Please use this in-game."
+  crate:
+    error:
+      invalid-crate: "§l§cERROR»§r §fInvalid crate."
+    success: "§l§aSUCCES»§r §fPlease tap a chest block to create a crate, or use (/mcrate crate cancel) to cancel."
+    creation-mode:
+      not-in-mode: "§l§cERROR»§r §fYou are not in crate creation mode."
+      cancelled: "§l§aSUCCES»§r §fCrate creation cancelled."
+  key:
+    error:
+      invalid-player: "§l§cERROR»§r §fInvalid player."
+      invalid-crate: "§l§cERROR»§r §fInvalid crate type."
+      not-numeric: "§l§cERROR»§r §fAmount must be numeric."
+    success:
+      sender: "§l§aCONGRATULATIONS»§r §fYou've received the {CRATE} key."
+      target: "§l§aSUCCES»§r §fYou've given {TARGET} the {CRATE} key."
+  keyall:
+    error:
+      invalid-crate: "§l§cERROR»§r §fInvalid crate type."
+      not-numeric: "§l§cERROR»§r §fAmount must be numeric."
+    success:
+      sender: "§l§aCONGRATULATIONS»§r §fYou've received the {CRATE} key."
+      target: "§l§aSUCCES»§r §fYou've given all online players the {CRATE} key."
+form:
+  money-not-enough: "§l§cERROR»§r §fYour money not enough to buy key!"
+  crate-success: "§l§aCONGRATULATIONS»§r §fPlease tap a chest block to create a crate, or use (/mcrate crate cancel) to cancel."
+  invalid-crate: "§l§cERROR»§r §fInvalid crate type."
+  invalid-player: "§l§cERROR»§r §fPlayer not found."
+  success-sender: "You've received the {CRATE} key."
+  success-all-target: "§l§aSUCCES»§r §fYou've given all online players the {CRATE} key."
+  success-target: "§l§aSUCCES»§r §fYou've given {TARGET} the {CRATE} key."
+crates:
+  opened-crate: "You Opened {CRATE} Crates"
+  successfully-opened: "§l§aSUCCES»§r §fYou Got A: §e{ITEM}"
+  menu-name: "{CRATE} Crates"
+  preview:
+    item:
+      name: "§r§l§e{COUNT}x §r§f{ITEM}"
+      lore: "§r§6§lCHANCE§r§6: {CHANCE}%"
+  error:
+    invalid-crate: "§l§cERROR»§r §f§7Invalid or missing crate type."
+    currently-opened: "§l§cERROR»§r §fCrate is currently being opened."
+    inventory-full: "§l§cERROR»§r §fYou must have {COUNT} empty slots."
+  success:
+    crate-created: "§l§aSUCCES»§r §f{CRATE} Crate created."
