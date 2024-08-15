@@ -10,7 +10,7 @@ use CortexPE\Commando\BaseCommand;
 use CortexPE\Commando\exception\HookAlreadyRegistered;
 use CortexPE\Commando\PacketHooker;
 use DaPigGuy\libPiggyUpdateChecker\libPiggyUpdateChecker;
-use rchlldev\MCrates\commands\CrateCommand;
+use Mrchlldev\MCrates\commands\CrateCommand;
 use Mrchlldev\MCrates\commands\KeyAllCommand;
 use Mrchlldev\MCrates\commands\KeyCommand;
 use Mrchlldev\MCrates\commands\PCMenuCommand;
