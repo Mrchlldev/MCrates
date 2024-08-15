@@ -15,6 +15,13 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
 class KeySubcommand extends BaseSubCommand
 {
+
+    private MCrates $plugin;
+    
+    public function __construct(MCrates $plugin) {
+        $this->plugin = $plugin;
+        parent::__construct("key", "");
+    }
     
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
