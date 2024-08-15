@@ -6,4 +6,11 @@ projects:
   MCrates:
     path: ""
     icon: "images (32).jpeg"
+    libs:
+      - src: ACM-PocketMine-MP/Commando/Commando
+        version: ^3.2.1
+      - src: Muqsit/invmenu/InvMenu
+        version: ^4.6.5
+      - src: DaPigGuy/libPiggyUpdateChecker/libPiggyUpdateChecker
+        version: ^1.0.0
 ...
