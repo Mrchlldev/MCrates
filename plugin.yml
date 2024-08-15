@@ -1,8 +1,8 @@
 name: MCrates
 main: Mrchlldev\MCrates\MCrates
-version: 0.0.1
+version: 1.0.0-BETA
 api: 5.3.0
-author: "DaPigGuy, Remaked and Convert by Mrchlldev"
+author: "DaPigGuy, Mrchlldev"
 
 permissions:
   mcrate:
