@@ -15,6 +15,13 @@ use pocketmine\player\Player;
 
 class KeyAllSubcommand extends BaseSubCommand
 {
+
+    private MCrates $plugin;
+    
+    public function __construct(MCrates $plugin) {
+        $this->plugin = $plugin;
+        parent::__construct("keyall", "");
+    }
     
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
