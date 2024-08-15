@@ -4,7 +4,6 @@ namespace Mrchlldev\MCrates\commands;
 
 use Mrchlldev\MCrates\commands\subcommand\KeyAllSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\KeySubcommand;
-use Mrchlldev\MCrates\commands\subcommand\KeyShopSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\CrateSubcommand;
 use Mrchlldev\MCrates\utils\FormManager;
 use Mrchlldev\MCrates\MCrates;
