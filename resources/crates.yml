@@ -4,7 +4,7 @@ crates:
       - item: "cooked_beef"
         amount: 64
         chance: 15
-      - item: "minecraft:diamond_helmet'
+      - item: "minecraft:diamond_helmet"
         amount: 1
         chance: 15
       - item: "1:0"
