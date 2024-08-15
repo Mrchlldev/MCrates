@@ -22,9 +22,9 @@ class MCrateCommand extends BaseCommand {
     {
         $this->setPermission("mcrate.command");
         $this->setAliases(["mc"]);
-        $this->registerSubCommand(new CrateSubcommand($this->plugin, "crate"));
-        $this->registerSubCommand(new KeyAllSubcommand($this->plugin, "keyall"));
-        $this->registerSubCommand(new KeySubcommand($this->plugin, "key"));
+        $this->registerSubCommand(new CrateSubcommand(MCrates::getInstance(), "crate"));
+        $this->registerSubCommand(new KeyAllSubcommand(MCrates::getInstance(), "keyall"));
+        $this->registerSubCommand(new KeySubcommand(MCrates::getInstance(), "key"));
         $this->addConstraint(new InGameRequiredConstraint($this));
     }
 
