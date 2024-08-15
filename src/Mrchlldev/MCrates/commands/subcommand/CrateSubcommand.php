@@ -15,6 +15,13 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 class CrateSubcommand extends BaseSubCommand
 {
 
+    private MCrates $plugin;
+    
+    public function __construct(MCrates $plugin) {
+        $this->plugin = $plugin;
+        parent::__construct("crate", "");
+    }
+
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
         if (!$sender instanceof Player) {
