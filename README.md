@@ -7,6 +7,7 @@
   <li>libPiggyUpdateChecker</li>
   <li>InvMenu</li>
   <li>Customies</li>
+  <li>FormAPI</li>
 </ol>
 
 <h2>Support crate blocks:</h2>
