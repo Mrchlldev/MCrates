@@ -14,17 +14,24 @@ use pocketmine\command\CommandSender;
 
 class MCrateCommand extends BaseCommand {
 
+    private MCrates $plugin;
+    
+    public function __construct(MCrates $plugin, string $name, string $description = "", array $aliases = []) {
+        $this->plugin = $plugin;
+        parent::__construct($plugin, $name, $description, $aliases);
+        $this->setPermission("mcrate.command");
+        $this->setAliases(["mc"]);
+    }
+
 
     /**
      * @return void
      */
     protected function prepare(): void
     {
-        $this->setPermission("mcrate.command");
-        $this->setAliases(["mc"]);
-        $this->registerSubCommand(new CrateSubcommand(MCrates::getInstance(), "crate"));
-        $this->registerSubCommand(new KeyAllSubcommand(MCrates::getInstance(), "keyall"));
-        $this->registerSubCommand(new KeySubcommand(MCrates::getInstance(), "key"));
+        $this->registerSubCommand(new CrateSubcommand($this->plugin));
+        $this->registerSubCommand(new KeyAllSubcommand($this->plugin));
+        $this->registerSubCommand(new KeySubcommand($this->plugin));
         $this->addConstraint(new InGameRequiredConstraint($this));
     }
 
