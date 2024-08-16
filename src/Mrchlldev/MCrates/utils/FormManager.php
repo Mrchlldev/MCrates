@@ -40,7 +40,7 @@ class FormManager {
               $player->sendMessage(MCrates::getInstance()->getMessage("form.close-message"));
           }
        });
-       $form->setTitle(MCrates::PREFIX . " - Main Menu");
+       $form->setTitle(MCrates::PREFIX . "- Main Menu");
        $form->setContent("Manage M-Crates Here !");
        $form->addButton("Create A Crates");
        $form->addButton("Give Key");
@@ -65,7 +65,7 @@ class FormManager {
           MCrates::getInstance()->setInCrateCreationMode($player, $crate);
           $player->sendMessage(MCrates::getInstance()->getMessage("form.crate-success"));
        });
-       $form->setTitle(MCrates::PREFIX . " - Create Crates");
+       $form->setTitle(MCrates::PREFIX . "- Create Crates");
        $form->addInput("Crates Name", "Enter A Crates Name Here");
        $player->sendForm($form);
     }
@@ -94,7 +94,7 @@ class FormManager {
           $target->sendMessage(MCrates::getInstance()->getMessage("form.success-sender", ["{CRATE}" => $crate->getName()]));
           $player->sendMessage(MCrates::getInstance()->getMessage("form.success-target", ["{CRATE}" => $crate->getName(), "{TARGET}" => $target->getName()]));
        });
-       $form->setTitle(MCrates::PREFIX . " - Give Key");
+       $form->setTitle(MCrates::PREFIX . "- Give Key");
        $form->addInput("Crates Name", "Enter A Crates Name Here");
        $form->addInput("Player Name", "Enter A Player Name Here");
        $form->addSlider("Amount Key", 1, (int)$amountKey);
@@ -126,7 +126,7 @@ class FormManager {
             $player->sendMessage(MCrates::getInstance()->getMessage("form.success-all-target", ["{CRATE}" => $crate->getName()]));
           }
        });
-       $form->setTitle(MCrates::PREFIX . " - Give All Key");
+       $form->setTitle(MCrates::PREFIX . "- Give All Key");
        $form->addInput("Crates Name", "Enter A Crates Name Here");
        $form->addSlider("Amount Key", 1, (int)$amountKey);
        $player->sendForm($form);
