@@ -98,7 +98,7 @@ class MCrates extends PluginBase
                     }
                 }
                 try {
-                    $item = StringToItemParser::getInstance()->parse($itemData["item"]) ?? LegacyStringToItemParser::getInstance()->parse($itemData["item"]) ?? CustomiesItemFactory::getInstance()->get($itemData["item"]);
+                    $item = StringToItemParser::getInstance()->parse($itemData["item"]) ?? LegacyStringToItemParser::getInstance()->parse($itemData["item"]);
                 }catch(LegacyStringToItemParserException $e){
                     $this->getLogger()->warning($e->getMessage());
                 }
