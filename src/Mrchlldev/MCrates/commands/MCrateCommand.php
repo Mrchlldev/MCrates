@@ -4,8 +4,8 @@ namespace Mrchlldev\MCrates\commands;
 
 use Mrchlldev\MCrates\commands\subcommand\KeyAllSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\KeySubcommand;
-use Mrchlldev\MCrates\commands\subcommand\KeyShopSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\CrateSubcommand;
+use Mrchlldev\MCrates\commands\subcommand\ListSubcommand;
 use Mrchlldev\MCrates\utils\FormManager;
 use Mrchlldev\MCrates\MCrates;
 use pocketmine\player\Player;
@@ -21,7 +21,9 @@ class MCrateCommand extends BaseCommand {
     protected function prepare(): void
     {
         $this->setPermission("mcrate.command");
+        $this->setAliases(["mc"]);
         $this->registerSubCommand(new CrateSubcommand(MCrates::getInstance(), "crate"));
+        $this->registerSubCommand(new ListSubcommand(MCrates::getInstance(), "list"));
         $this->registerSubCommand(new KeyAllSubcommand(MCrates::getInstance(), "keyall"));
         $this->registerSubCommand(new KeySubcommand(MCrates::getInstance(), "key"));
         $this->addConstraint(new InGameRequiredConstraint($this));
