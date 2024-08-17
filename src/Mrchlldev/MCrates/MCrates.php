@@ -10,6 +10,8 @@ use CortexPE\Commando\BaseCommand;
 use CortexPE\Commando\exception\HookAlreadyRegistered;
 use CortexPE\Commando\PacketHooker;
 use DaPigGuy\libPiggyUpdateChecker\libPiggyUpdateChecker;
+use DaPigGuy\PiggyCustomEnchants\CustomEnchantManager;
+use DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants;
 use Mrchlldev\MCrates\commands\CrateCommand;
 use Mrchlldev\MCrates\commands\KeyAllCommand;
 use Mrchlldev\MCrates\commands\KeyCommand;
@@ -54,7 +56,7 @@ class MCrates extends PluginBase
      */
     public function onEnable(): void
     {
-        $this->getLogger()->emergency("This plugin is not supported PiggyCustomEnchants for a while");
+        //$this->getLogger()->emergency("This plugin is not supported PiggyCustomEnchants for a while");
         foreach (
             [
                 "Commando" => BaseCommand::class,
@@ -100,7 +102,7 @@ class MCrates extends PluginBase
                 try {
                     $item = StringToItemParser::getInstance()->parse($itemData["item"]) ?? LegacyStringToItemParser::getInstance()->parse($itemData["item"]);
                 }catch(LegacyStringToItemParserException $e){
-                    $this->getLogger()->warning($e->getMessage());
+                    echo $e->getMessage();
                 }
                 if($tags !== null) {
                     $item->setNamedTag($tags);
@@ -117,7 +119,7 @@ class MCrates extends PluginBase
                         $this->getLogger()->error("Invalid enchantment configuration used in crate " . $crateName);
                         continue;
                     }
-                    $enchantment = StringToEnchantmentParser::getInstance()->parse($enchantmentData["name"]);
+                    $enchantment = StringToEnchantmentParser::getInstance()->parse($enchantmentData["name"]) ?? ((($plugin = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants")) instanceof PiggyCustomEnchants && $plugin->isEnabled()) ? CustomEnchantManager::getEnchantmentByName($enchantmentData["name"]) : null);
                     if ($enchantment !== null) $item->addEnchantment(new EnchantmentInstance($enchantment, $enchantmentData["level"]));
                 }
                 $itemData["type"] = $itemData["type"] ?? "item";
