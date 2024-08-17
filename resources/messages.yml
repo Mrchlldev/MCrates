@@ -23,7 +23,6 @@ commands:
       sender: "§l§aCONGRATULATIONS»§r §fYou've received the {CRATE} key."
       target: "§l§aSUCCES»§r §fYou've given all online players the {CRATE} key."
 form:
-  money-not-enough: "§l§cERROR»§r §fYour money not enough to buy key!"
   crate-success: "§l§aCONGRATULATIONS»§r §fPlease tap a chest block to create a crate, or use (/mcrate crate cancel) to cancel."
   invalid-crate: "§l§cERROR»§r §fInvalid crate type."
   invalid-player: "§l§cERROR»§r §fPlayer not found."
