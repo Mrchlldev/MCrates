@@ -79,7 +79,7 @@ class Crate
         try {
             $key = StringToItemParser::getInstance()->parse($this->plugin->getConfig()->getNested("keys.id") . ":" . $this->plugin->getConfig()->getNested("keys.meta")) ?? LegacyStringToItemParser::getInstance()->parse($this->plugin->getConfig()->getNested("keys.id") . ":" . $this->plugin->getConfig()->getNested("keys.meta"));
         }catch (LegacyStringToItemParserException $e){
-            echo $e->getMessage();
+            $this->getLogger()->warning($e->getMessage());
         }
         $key?->setCount($amount);
         $key->setCustomName(ucfirst(str_replace("{CRATE}", $this->getName(), $this->plugin->getConfig()->getNested("keys.name"))));
