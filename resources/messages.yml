@@ -32,7 +32,6 @@ form:
   success-target: "§l§aSUCCES»§r §fYou've given {TARGET} the {CRATE} key."
 crates:
   opened-crate: "You Opened {CRATE} Crates"
-  successfully-opened: "§l§aSUCCES»§r §fYou Got A: §e{ITEM}"
   menu-name: "{CRATE} Crates"
   preview:
     item:
