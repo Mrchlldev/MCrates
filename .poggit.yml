@@ -5,7 +5,7 @@ branches:
 projects:
   MCrates:
     path: ""
-    icon: "images (32).jpeg"
+    icon: "20240814_111146.jpg"
     libs:
       - src: ACM-PocketMine-MP/Commando/Commando
         version: ^3.2.1
