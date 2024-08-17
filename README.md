@@ -37,4 +37,5 @@
 <h2>TODO:</h2>
 <ol>
   <li>Add Keyshop feature</li>
+  <li>Add /mcrate list for see the crate list from crates.yml</li>
 </ol>
