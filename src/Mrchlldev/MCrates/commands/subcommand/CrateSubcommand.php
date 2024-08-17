@@ -14,14 +14,7 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
 class CrateSubcommand extends BaseSubCommand
 {
-
-    private MCrates $plugin;
-    
-    public function __construct(MCrates $plugin) {
-        $this->plugin = $plugin;
-        parent::__construct("crate", "");
-    }
-
+  
     public function onRun(CommandSender $sender, string $aliasUsed, array $args): void
     {
         if (!$sender instanceof Player) {
@@ -39,16 +32,13 @@ class CrateSubcommand extends BaseSubCommand
             }
             MCrates::getInstance()->setInCrateCreationMode($sender, null);
             $sender->sendMessage(MCrates::getInstance()->getMessage("commands.crate.creation-mode.cancelled"));
-            self::playSound($sender, "random.levelup");
             return;
         }
         $crate = MCrates::getInstance()->getCrate($args["type"]);
         if ($crate === null) {
             $sender->sendMessage(MCrates::getInstance()->getMessage("commands.crate.error.invalid-crate"));
-            self::playSound($sender, "random.pop");
             return;
         }
-        self::playSound($sender, "random.levelup");
         MCrates::getInstance()->setInCrateCreationMode($sender, $crate);
         $sender->sendMessage(MCrates::getInstance()->getMessage("commands.crate.success"));
     }
@@ -67,22 +57,5 @@ class CrateSubcommand extends BaseSubCommand
      */
     public function getPermission() {
         return "mcrate.command.crate";
-    }
-
-    public static function playSound(Player $p,
-        string $sound,
-        float $minimumVolume = 1.0,
-        float $volume = 1.0,
-        float $pitch = 1.0) {
-        $position = null;
-        $pos = $p->getPosition();
-        $pk = new PlaySoundPacket();
-        $pk->soundName = $sound;
-        $pk->volume = $volume > $minimumVolume ? $minimumVolume : $volume;
-        $pk->pitch = $pitch;
-        $pk->x = $pos->x;
-        $pk->y = $pos->y;
-        $pk->z = $pos->z;
-        $p->getNetworkSession()->sendDataPacket($pk);
     }
 }
