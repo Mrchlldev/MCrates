@@ -1,4 +1,4 @@
-<h2>MCrates<h2>
+<h2>MCrates</h2>
 <p>MCrates is a cloning plugin from PiggyCrates, Make simple and customizable crates plugin, supporting an unlimited amount of crate types. support custom item by Customies?</p>
 
 <h2>Feature:</h2>
