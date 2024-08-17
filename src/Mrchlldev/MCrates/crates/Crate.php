@@ -94,7 +94,7 @@ class Crate
         try {
             $key = StringToItemParser::getInstance()->parse($this->plugin->getConfig()->getNested("keys.id") . ":" . $this->plugin->getConfig()->getNested("keys.meta")) ?? LegacyStringToItemParser::getInstance()->parse($this->plugin->getConfig()->getNested("keys.id") . ":" . $this->plugin->getConfig()->getNested("keys.meta"));
         }catch (LegacyStringToItemParserException $e){
-            echo $e->getMessage();
+            $this->getLogger()->warning($e->getMessage());
         }
         return $item->getTypeId() === $key->getTypeId() && ($keyTypeTag = $item->getNamedTag()->getTag("KeyType")) instanceof StringTag && $keyTypeTag->getValue() === $this->getName();
     }
