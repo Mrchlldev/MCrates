@@ -4,6 +4,7 @@ namespace Mrchlldev\MCrates\commands;
 
 use Mrchlldev\MCrates\commands\subcommand\KeyAllSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\KeySubcommand;
+use Mrchlldev\MCrates\commands\subcommand\KeyShopSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\CrateSubcommand;
 use Mrchlldev\MCrates\utils\FormManager;
 use Mrchlldev\MCrates\MCrates;
@@ -14,24 +15,15 @@ use pocketmine\command\CommandSender;
 
 class MCrateCommand extends BaseCommand {
 
-    private MCrates $plugin;
-    
-    public function __construct(MCrates $plugin, string $name, string $description = "", array $aliases = []) {
-        $this->plugin = $plugin;
-        parent::__construct($plugin, $name, $description, $aliases);
-        $this->setPermission("mcrate.command");
-        $this->setAliases(["mc"]);
-    }
-
-
     /**
      * @return void
      */
     protected function prepare(): void
     {
-        $this->registerSubCommand(new CrateSubcommand($this->plugin));
-        $this->registerSubCommand(new KeyAllSubcommand($this->plugin));
-        $this->registerSubCommand(new KeySubcommand($this->plugin));
+        $this->setPermission("mcrate.command");
+        $this->registerSubCommand(new CrateSubcommand(MCrates::getInstance(), "crate"));
+        $this->registerSubCommand(new KeyAllSubcommand(MCrates::getInstance(), "keyall"));
+        $this->registerSubCommand(new KeySubcommand(MCrates::getInstance(), "key"));
         $this->addConstraint(new InGameRequiredConstraint($this));
     }
 
