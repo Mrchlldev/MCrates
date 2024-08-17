@@ -100,7 +100,7 @@ class MCrates extends PluginBase
                 try {
                     $item = StringToItemParser::getInstance()->parse($itemData["item"]) ?? LegacyStringToItemParser::getInstance()->parse($itemData["item"]) ?? CustomiesItemFactory::getInstance()->get($itemData["item"]);
                 }catch(LegacyStringToItemParserException $e){
-                    echo $e->getMessage();
+                    $this->getLogger()->warning($e->getMessage());
                 }
                 if($tags !== null) {
                     $item->setNamedTag($tags);
