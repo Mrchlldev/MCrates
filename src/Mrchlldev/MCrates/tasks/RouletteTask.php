@@ -88,7 +88,6 @@ class RouletteTask extends Task
                     $reward->getItem()->getName();
                   }
                   $this->player->getInventory()->addItem($reward->getItem());
-                  $this->player->sendMessage(MCrates::getInstance()->getMessage("crates.successfully-opened", ["{ITEM}" => $itemName]));
                   }
                 $server = $this->player->getServer();
                 foreach ($reward->getCommands() as $command) {
