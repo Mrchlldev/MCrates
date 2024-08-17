@@ -158,6 +158,16 @@ class MCrates extends PluginBase
         return $this->crates[$name] ?? null;
     }
 
+    public function sendListCrate(Player $player)
+    {
+        $crateConfig = new Config($this->getDataFolder() . "crates.yml");
+        $crateList = "";
+        foreach ($crateConfig->get("crates") as $crateName => $crateData) {
+            $crateList .= "§l§e=> §r§a{$crateName}\n";
+        }
+        $player->sendMessage("§l§a======= §eCrate List §l§a=======§r\n" . $crateList);
+    }
+
     public function getCrates(): array
     {
         return $this->crates;
