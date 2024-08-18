@@ -13,11 +13,11 @@
 
 <h2>Depend:</h2>
 <ol>
-  <li>Commando</li>
-  <li>libPiggyUpdateChecker</li>
-  <li>InvMenu</li>
-  <li>Customies</li>
-  <li>FormAPI</li>
+  <li>Commando by <a href="https://github.com/CortexPE/Commando">CortexPE</a></li>
+  <li>libPiggyUpdateChecker by <a href="https://github.com/DaPigGuy/libPiggyUpdateChecker">DaPigGuy</a></li>
+  <li>InvMenu by <a href="https://github.com/Muqsit/InvMenu">Muqsit</a></li>
+  <li>Customies by <a href="https://github.com/CustomiesDevs/Customies">Customiesdevs</a></li>
+  <li>FormAPI by <a href="https://github.com/jojoe77777/FormAPI">Jojoe77777</a></li>
 </ol>
 
 <h2>Support crate blocks:</h2>
