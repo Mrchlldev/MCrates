@@ -13,13 +13,13 @@ permissions:
     description: "Allow usage of all MCrates commands"
   mcrate.command.crate:
     default: op
-    description: "Allow usage of the /crate command"
-  mcrate.command.keyshop:
-    default: true
-    description: "Allow usage of the /keyshop command"
+    description: "Allow usage of the /mcrate crate command"
+  mcrate.command.list:
+    default: op
+    description: "Allow usage of the /mcrate list command"
   mcrate.command.key:
     default: op
-    description: "Allow usage of the /key command"
+    description: "Allow usage of the /mcrate key command"
   mcrate.command.keyall:
     default: op
-    description: "Allow usage of the /keyall command"
+    description: "Allow usage of the /mcrate keyall command"
