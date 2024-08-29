@@ -7,7 +7,7 @@ projects:
     path: ""
     icon: "20240814_111146.jpg"
     libs:
-      - src: CortexPE\Commando
+      - src: CortexPE/CommandoBaseCommand
         version: ^3.1.0
       - src: Muqsit/invmenu/InvMenu
         version: ^4.6.5
