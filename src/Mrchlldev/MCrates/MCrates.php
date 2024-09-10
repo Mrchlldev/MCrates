@@ -15,7 +15,7 @@ use DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants;
 use Mrchlldev\MCrates\commands\subcommand\CrateSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\KeyAllSubcommand;
 use Mrchlldev\MCrates\commands\subcommand\KeySubcommand;
-use Mrchlldev\MCrates\commands\subcommand\ListSubcommand
+use Mrchlldev\MCrates\commands\subcommand\ListSubcommand;
 use Mrchlldev\MCrates\commands\MCrateCommand;
 use Mrchlldev\MCrates\crates\Crate;
 use Mrchlldev\MCrates\crates\CrateItem;
