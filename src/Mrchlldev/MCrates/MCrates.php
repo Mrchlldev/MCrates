@@ -12,10 +12,11 @@ use CortexPE\Commando\PacketHooker;
 use DaPigGuy\libPiggyUpdateChecker\libPiggyUpdateChecker;
 use DaPigGuy\PiggyCustomEnchants\CustomEnchantManager;
 use DaPigGuy\PiggyCustomEnchants\PiggyCustomEnchants;
-use Mrchlldev\MCrates\commands\subcommand\CrateCommand;
-use Mrchlldev\MCrates\commands\subcommand\KeyAllCommand;
-use Mrchlldev\MCrates\commands\subcommand\KeyCommand;
-use Mrchlldev\MCrates\commands\subcommand\MCrateCommand;
+use Mrchlldev\MCrates\commands\subcommand\CrateSubcommand;
+use Mrchlldev\MCrates\commands\subcommand\KeyAllSubcommand;
+use Mrchlldev\MCrates\commands\subcommand\KeySubcommand;
+use Mrchlldev\MCrates\commands\subcommand\ListSubcommand
+use Mrchlldev\MCrates\commands\MCrateCommand;
 use Mrchlldev\MCrates\crates\Crate;
 use Mrchlldev\MCrates\crates\CrateItem;
 use Mrchlldev\MCrates\tiles\CrateTile;
