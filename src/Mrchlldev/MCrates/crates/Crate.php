@@ -74,12 +74,11 @@ class Crate
 
     public function giveKey(Player $player, int $amount): void
     {
-//        $key = ItemFactory::getInstance()->get((int)$this->plugin->getConfig()->getNested("keys.id"), (int)$this->plugin->getConfig()->getNested("keys.meta"), $amount);
         $key = null;
         try {
             $key = StringToItemParser::getInstance()->parse($this->plugin->getConfig()->getNested("keys.id") . ":" . $this->plugin->getConfig()->getNested("keys.meta")) ?? LegacyStringToItemParser::getInstance()->parse($this->plugin->getConfig()->getNested("keys.id") . ":" . $this->plugin->getConfig()->getNested("keys.meta"));
         }catch (LegacyStringToItemParserException $e){
-            $this->getLogger()->warning($e->getMessage());
+            $this->plugin->getLogger()->warning($e->getMessage());
         }
         $key?->setCount($amount);
         $key->setCustomName(ucfirst(str_replace("{CRATE}", $this->getName(), $this->plugin->getConfig()->getNested("keys.name"))));
